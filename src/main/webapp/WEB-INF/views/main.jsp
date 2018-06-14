@@ -7,6 +7,7 @@
 <title>INTERMISSION</title>
 </head>
 <body>
+
 <jsp:include page="include/header.jsp"></jsp:include><!-- 헤더 -->
 <jsp:include page="include/slide.jsp"></jsp:include><!-- 슬라이드 -->
 <jsp:include page="include/menu.jsp"></jsp:include><!-- 메뉴 -->
