@@ -36,8 +36,5 @@ public class HomeController {
 		return "main";
 	}
 	
-	@RequestMapping(value="/comment")
-	public String comment() {
-		return "comment";
-	}
+
 }

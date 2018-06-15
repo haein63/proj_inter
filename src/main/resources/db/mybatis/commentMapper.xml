@@ -4,13 +4,13 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace = "com.homepage.dto.Comments">
 	
-	<insert id = "insert" parameterType="comments">
+	<insert id = "insertCmt" parameterType="comments">
 		insert into comments 
 		values(#{commentId}, #{commentRating}, #{userId}, 
 		#{commentContent}, #{musicalTitle}, #{regDate})
 	</insert>
 	
-	<delete id = "delete" parameterType="int">
+	<delete id = "deleteCmt" parameterType="int">
 		delete from comments where comment_No=#{commentNo}
 	</delete>
 

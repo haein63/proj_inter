@@ -14,9 +14,11 @@ public class CommentController {
 	@Autowired
 	CommentService coms;
 	
+	
+	
 	/*@PostMapping(value="insertkey")
 	public String insert(@RequestParam id, ) {
-		coms.insert(comments);
+		coms.insertCmt(comments);
 		
 		return "insertResult";
 	}*/

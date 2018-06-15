@@ -25,22 +25,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 // @Transactional 활성화
 @EnableTransactionManagement
 public class InfraConfig {
-	// 개발 환경에서 사용되는 DataSource >> dev profile
-	// dbconfig.properties의 값을 ${driver} 형태로 참조
-	@Bean
-	@Profile("dev")
-	public DataSource dataSource1(@Value ("${db.driver}") String driverClassName, @Value("${db.url}") String url, @Value("${db.username}") String username, @Value("${db.password}") String password) {
-		DriverManagerDataSource ds = new DriverManagerDataSource();
-		ds.setDriverClassName(driverClassName);
-		ds.setUrl(url);
-		ds.setUsername(username);
-		ds.setPassword(password);
-		return ds;
-	}
 	
 	// 운영 환경에서 사용되는 DataSource >> oper profile
 	@Bean
-	@Profile("oper")
 	public DataSource dataSource2(@Value ("${db.driver}") String driverClassName,
 								  @Value("${db.url}") String url,
 								  @Value("${db.username}") String username,
@@ -57,7 +44,7 @@ public class InfraConfig {
 	public SqlSessionFactoryBean sessionFactoryBean(DataSource ds) {
 		SqlSessionFactoryBean sfb = new SqlSessionFactoryBean();
 		sfb.setDataSource(ds);
-		String conFile = "classpath:/db/mybatis/mybatis-config.xml";
+		String conFile = "classpath:/db/mybatis/mybatis_config.xml";
 		Resource res = new PathMatchingResourcePatternResolver().getResource(conFile);
 		sfb.setConfigLocation(res);
 		return sfb;
