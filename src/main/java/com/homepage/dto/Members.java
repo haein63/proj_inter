@@ -2,6 +2,7 @@ package com.homepage.dto;
 
 import java.util.Date;
 
+
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
 
@@ -14,6 +15,11 @@ public class Members {
 	private Date regDate = new Date();
 	private String confirmKey;
 	private String confirmStatus;
+
+	public Members() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	public Members(String id, String password, String email, String pic, Date regDate, String confirmKey,
 			String confirmStatus) {
