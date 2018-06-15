@@ -13,10 +13,5 @@
 <input type="text" name="date" value="날짜">
 <input type = "submit" value="전송">
 
-
-
- 
- 
- 
 </body>
 </html>
