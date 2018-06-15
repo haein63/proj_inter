@@ -12,7 +12,7 @@ import com.homepage.service.CommentService;
 public class CommentController {
 
 	@Autowired
-	CommentService coms;
+	CommentService com;
 	
 	/*@PostMapping(value="insertkey")
 	public String insert(@RequestParam id, ) {

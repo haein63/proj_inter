@@ -1,6 +1,13 @@
 package com.homepage.dao;
 
+import java.util.List;
+
+import com.homepage.dto.Musical;
+
 public interface MusicalDao {
-	String getPoster();
-	String getTitle();
+	List<Musical> getCurrentMusicals();
+
+	List<Musical> getPastMusicals();
+	
+	List<Musical> getFutureMusicals();
 }

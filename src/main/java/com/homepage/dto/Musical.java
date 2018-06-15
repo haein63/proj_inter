@@ -26,6 +26,9 @@ public class Musical {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+	
 	public Musical(String title, String musicalPic, String poster, String hall, Date startDate, Date endDate,
 			String casting) {
 		super();
