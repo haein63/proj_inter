@@ -3,11 +3,18 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace = "com.homepage.dto.Comments">
+	<resultMap type="Comments" id="comments">
+	<id column="commentNo" property="commentNo"/>
+	<result column="userId" property="userId"/>
+	<result column="commentContent" property="commentContent"/>
+	<result column="musicalTitle" property="musicalTitle"/>
+	<result column="regDate" property="regDate"/>
+	</resultMap>
 	
-	<insert id = "insertCmt" parameterType="comments">
+	<insert id = "insertCmt" parameterMap="Comments">
 		insert into comments 
-		values(#{commentId}, #{commentRating}, #{userId}, 
-		#{commentContent}, #{musicalTitle}, #{regDate})
+		values(#{commentContent},sysdate, #{userId},#{musicalTitle},
+        #{commentNo}, #{commentRating})
 	</insert>
 	
 	<delete id = "deleteCmt" parameterType="int">
