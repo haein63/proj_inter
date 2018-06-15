@@ -13,14 +13,14 @@ public class CommentServiceImpl implements CommentService {
 	CommentDao cdao;
 	
 	@Override
-	public int insert(Comments comments) {
-		int result = cdao.insert(comments);
+	public int insertCmt(Comments comments) {
+		int result = cdao.insertCmt(comments);
 		return result;
 	}
 
 	@Override
-	public int delete(int commentNo) {
-		int result = cdao.delete(commentNo);
+	public int deleteCmt(int commentNo) {
+		int result = cdao.deleteCmt(commentNo);
 		return result;
 	}
 

@@ -13,7 +13,7 @@ public class CommentDaoImpl implements CommentDao {
 	SqlSessionTemplate session;
 
 	@Override
-	public int insert(Comments comments) {
+	public int insertCmt(Comments comments) {
 		String statement = ns + "insert";
 		int result = session.insert(statement, comments);
 		if (result == 1) {
@@ -24,7 +24,7 @@ public class CommentDaoImpl implements CommentDao {
 	}
 
 	@Override
-	public int delete(int commentNo) {
+	public int deleteCmt(int commentNo) {
 		String statement = ns + "delete";
 
 		int result = session.delete(statement, commentNo);

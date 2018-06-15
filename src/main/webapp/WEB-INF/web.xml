@@ -3,7 +3,7 @@
   <display-name>homepage</display-name>
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>com.homepage.config.ApplicationConfig</param-value>
+    <param-value>com.homepage.config.BusinessLogicConfig</param-value>
   </context-param>
   <context-param>
     <param-name>contextClass</param-name>

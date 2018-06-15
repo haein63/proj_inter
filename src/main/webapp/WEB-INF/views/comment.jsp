@@ -7,15 +7,11 @@
 </head>
 <body>
 <!-- 로그인 성공 했을 때 댓글 달기 가능 -->
-<form action = "" method="post" name = "cmtform">
-	<textarea cols="50" rows="4" name="comment"></textarea></br>
-	<input type = "submit" name = "submit" value="등록">
-</form>
 
- 
- <% 
+<input type="text" name = "comment" placeholder="한줄평!">
+<input type ="text" name = "userId" value="id">
+<input type="text" name="date" value="날짜">
+<input type = "submit" value="전송">
 
- %>
- 
 </body>
 </html>
