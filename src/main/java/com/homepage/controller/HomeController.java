@@ -20,7 +20,7 @@ public class HomeController {
 		model.addAttribute("name",name);
 		return "joinresult";
 	}
-	
+
 	@RequestMapping(value="/include/header")
 	public String header() {
 		return "/include/header";

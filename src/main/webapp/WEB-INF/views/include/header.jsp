@@ -58,11 +58,10 @@ text-align: center;
 	<div class="logo_box">INTERMISSION</div>
 
 	<div class="empty_box"></div>
-
 	<div class="sign_box">
-		<div class="login">LOGIN</div>
+		<a href="#" class="login" style="text-decoration: none;">LOGIN</a>
 		<div class="separation">/</div>
-		<div class="join">JOIN</div>
+		<a href="#" class="join" style="text-decoration: none;">JOIN</a>
 	</div>
 
 </div>`
