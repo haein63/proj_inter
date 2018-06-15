@@ -16,7 +16,7 @@ public class MusicalServiceImpl implements MusicalService{
 	
 	@Override
 	public List<Musical> getCurrentMusicals() {
-		// TODO Auto-generated method stub
+	
 		return null;
 	}
 
