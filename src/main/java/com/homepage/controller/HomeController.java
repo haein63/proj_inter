@@ -12,10 +12,6 @@ public class HomeController {
 	@RequestMapping(value="/join")
 	public String join(Model model) {
 		
-		
-		
-		
-		
 		return "JoinForm";
 	}
 	
@@ -38,5 +34,10 @@ public class HomeController {
 	@RequestMapping(value="main")
 	public String main() {
 		return "main";
+	}
+	
+	@RequestMapping(value="/comment")
+	public String comment() {
+		return "comment";
 	}
 }

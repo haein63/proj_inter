@@ -13,5 +13,6 @@
 	
 	<mappers>
 		<mapper resource="db/mybatis/memberMapper.xml"/>
+		 <mapper resource="db/mybatis/commentMapper.xml"/>
 	</mappers>
 </configuration>
