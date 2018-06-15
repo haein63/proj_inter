@@ -3,27 +3,33 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.homepage.dto.Musical">
-	
+
 	<select id="getCurrentMusicals" parameterType="basicMusicalMap">
-		select #{MUSICAL_POSTER}, #{MUSICAL_TITLE} from MUSICALS order by START_DATE
+		select #{MUSICAL_TITLE}, #{MUSICAL_POSTER} from MUSICALS order by START_DATE
 	</select>
-	
+
 	<select id="getPastMusicals" parameterType="basicMusicalMap">
-		select  from MUSICALS order by START_DATE
+		select #{MUSICAL_TITLE}, #{MUSICAL_POSTER} from MUSICALS order by START_DATE
 	</select>
-	
+
 	<select id="getFutureMusicals" parameterType="basicMusicalMap">
-		select #{MUSICAL_TITLE} from MUSICALS order by START_DATE
+		select
+		#{MUSICAL_TITLE}, #{MUSICAL_POSTER} from MUSICALS order by START_DATE
 	</select>
-	
+
+	<select id="getAllMusicals" parameterType="basicMusicalMap">
+		select * from MUSICALS
+		where title=#{MUSICAL_TITLE}
+	</select>
+
 	<resultMap type="members" id="twoMusicalMap">
-		<id column="MUSICAL_TITLE" property="id"/>
-		<result column="name" property="name"/>
-		<result column="pass" property="pass"/>
-		<result column="age" property="age"/>
-		<result column="email" property="email"/>
-		<result column="pic" property="pic"/>
-		<result column="regDate" property="regDate"/>
+		<id column="MUSICAL_TITLE" property="title" />
+		<result column="name" property="musicalPic" />
+		<result column="pass" property="poster" />
+		<result column="age" property="hall" />
+		<result column="email" property="startDate" />
+		<result column="pic" property="endDate" />
+		<result column="regDate" property="casting" />
 	</resultMap>
 
 </mapper>

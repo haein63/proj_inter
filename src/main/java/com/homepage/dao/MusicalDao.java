@@ -10,4 +10,6 @@ public interface MusicalDao {
 	List<Musical> getPastMusicals();
 	
 	List<Musical> getFutureMusicals();
+	
+	List<Musical> getAllMusicals();
 }
