@@ -11,6 +11,7 @@ public class CommentServiceImpl implements CommentService {
 
 	@Autowired
 	CommentDao cdao;
+	
 	@Override
 	public int insertCmt(Comments comments) {
 		int result = cdao.insertCmt(comments);

@@ -15,7 +15,7 @@ import com.homepage.service.CommentService;
 public class CommentController {
 
 	@Autowired
-	CommentService coms;
+	CommentService com;
 	
 	
 	@GetMapping(value="/comment")
