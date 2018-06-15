@@ -9,33 +9,33 @@ import com.homepage.dao.MusicalDao;
 import com.homepage.dto.Musical;
 
 @Service
-public class MusicalServiceImpl implements MusicalService{
+public class MusicalServiceImpl implements MusicalService {
 
 	@Autowired
 	MusicalDao mDao;
-	
+
 	@Override
 	public List<Musical> getCurrentMusicals() {
-	
-		return null;
+		List<Musical> result = mDao.getCurrentMusicals();
+		return result;
 	}
 
 	@Override
 	public List<Musical> getPastMusicals() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Musical> result = mDao.getPastMusicals();
+		return result;
 	}
 
 	@Override
 	public List<Musical> getFutureMusicals() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Musical> result = mDao.getFutureMusicals();
+		return result;
 	}
 
 	@Override
 	public List<Musical> getMusicals() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Musical> result = mDao.getMusicals();
+		return result;
 	}
 
 }
