@@ -34,8 +34,8 @@ public class MusicalImpl implements MusicalDao{
 	}
 
 	@Override
-	public List<Musical> getAllMusicals() {
-		String statement = ns+"getAllMusicals";
+	public List<Musical> getMusicals() {
+		String statement = ns+"getMusicals";
 		return session.selectList(statement);
 	}
 

@@ -1,10 +1,10 @@
-package com.homepage.dao;
+package com.homepage.service;
 
 import java.util.List;
 
 import com.homepage.dto.Musical;
 
-public interface MusicalDao {
+public interface MusicalService {
 	List<Musical> getCurrentMusicals();
 
 	List<Musical> getPastMusicals();

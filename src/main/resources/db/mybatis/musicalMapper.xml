@@ -5,31 +5,30 @@
 <mapper namespace="com.homepage.dto.Musical">
 
 	<select id="getCurrentMusicals" parameterType="basicMusicalMap">
-		select #{MUSICAL_TITLE}, #{MUSICAL_POSTER} from MUSICALS order by START_DATE
+		select #{MUSICAL_TITLE}, #{MUSICAL_POSTER} from MUSICALS where sysdate>#{START_DATE} and sysdate<#{END_DATE} order by START_DATE
 	</select>
 
 	<select id="getPastMusicals" parameterType="basicMusicalMap">
-		select #{MUSICAL_TITLE}, #{MUSICAL_POSTER} from MUSICALS order by START_DATE
+		select #{MUSICAL_TITLE}, #{MUSICAL_POSTER} from MUSICALS where sysdate>#{END_DATE} order by START_DATE
 	</select>
 
 	<select id="getFutureMusicals" parameterType="basicMusicalMap">
 		select
-		#{MUSICAL_TITLE}, #{MUSICAL_POSTER} from MUSICALS order by START_DATE
+		#{MUSICAL_TITLE}, #{MUSICAL_POSTER} from MUSICALS where sysdate<#{START_DATE} order by START_DATE
 	</select>
 
-	<select id="getAllMusicals" parameterType="basicMusicalMap">
-		select * from MUSICALS
-		where title=#{MUSICAL_TITLE}
+	<select id="getMusicals" parameterType="basicMusicalMap">
+		select * from MUSICALS where title=#{MUSICAL_TITLE}
 	</select>
 
-	<resultMap type="members" id="twoMusicalMap">
+	<resultMap type="Musical" id="basicMusicalMap">
 		<id column="MUSICAL_TITLE" property="title" />
-		<result column="name" property="musicalPic" />
-		<result column="pass" property="poster" />
-		<result column="age" property="hall" />
-		<result column="email" property="startDate" />
-		<result column="pic" property="endDate" />
-		<result column="regDate" property="casting" />
+		<result column="MUSICAL_PICTURE" property="musicalPic" />
+		<result column="MUSICAL_POSTER" property="poster" />
+		<result column="MUSICAL_HALL" property="hall" />
+		<result column="START_DATE" property="startDate" />
+		<result column="END_DATE" property="endDate" />
+		<result column="MUSICAL_CASTING" property="casting" />
 	</resultMap>
 
 </mapper>
