@@ -1,91 +1,67 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-
+	pageEncoding="UTF-8"%>
+<link
+	href="https://fonts.googleapis.com/css?family=Anton|Nanum+Gothic|Francois+One|Krona+One|Passion+One"
+	rel="stylesheet">
+	
 <style>
-
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+	margin: 0px;
+	padding: 0px;
 }
- 
-.main_box {
-	background-color: gray;
-    width: 100%;
-    height: 60px;
-    margin: 0 auto;
-	text-align: center;
+.header_box{
+width: 100%;
+height: 40px;
+background-color: #E4E4E4;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
 }
-.common {
-    display: inline-table;
-    height:40px;
-    position: relative;
-    top: 10px;
-    font-size: 20px;
+.logo_box{
+width: 10%;
+height: 40px;
+font-family: Anton;
+font-size: 25px;
 }
-
-.logo {
-	left: 10px;
-    font-size: 30px;
-    font-weight: bolder;
-    float: left;
+.sign_box{
+width: 13%;
+height: 40px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
 }
-
-.searchText{
-width: 70%;
+.empty_box{
+width: 65%;
+height:40px;
 }
-
-.searchButton{
-background-color: #555555;
-    border: none;
-    color: white;
-    padding: 10px 10px;
-    right: 10px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
+.login{
+width: 40%;
+font-family: Nanum+Gothic;
+font-size: 15px;
+text-align: center;
 }
-
-
-.sign {
-	float: right;
+.separation{
+width: 5%;
+text-align: center;
 }
-
-.login {
-    float: right;
+.join{
+width: 40%;
+font-family: Nanum+Gothic;
+font-size: 15px;
+text-align: center;
 }
-.button{
-    background-color: #555555;
-    border: none;
-    color: white;
-    padding: 10px 32px;
-    right: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    width: 100px;
-    top: 6px;
-}
-
 </style>
+<div class="header_box">
 
-<div class="main_box">
-    <div class="logo common">INTERMISSION</div>
-  
-  
-  <div class="search common">
-      <input type="text" class="searchText" placeholder="Search...">
-      <input type="submit" class="searchButton" value="submit"></input>
-</div>
-  
-  
-    <button class="login common button" href="#">Login</button>
-    <button class="sign common button" href="#">Join</button>
+	<div class="logo_box">INTERMISSION</div>
 
-</div>
+	<div class="empty_box"></div>
+	<div class="sign_box">
+		<a href="#" class="login" style="text-decoration: none;">LOGIN</a>
+		<div class="separation">/</div>
+		<a href="#" class="join" style="text-decoration: none;">JOIN</a>
+	</div>
 
+</div>`

@@ -24,4 +24,19 @@ public class HomeController {
 		model.addAttribute("name",name);
 		return "joinresult";
 	}
+
+	@RequestMapping(value="/include/header")
+	public String header() {
+		return "/include/header";
+	}
+	
+	@RequestMapping(value="/include/footer")
+	public String footer() {
+		return "/include/footer";
+	}
+	
+	@RequestMapping(value="main")
+	public String main() {
+		return "main";
+	}
 }
