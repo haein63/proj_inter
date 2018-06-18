@@ -27,4 +27,12 @@ public class UserServiceImpl implements UserService{
 		mylog.trace("축하합니다. 회원 가입 성공!");
 		return user;
 	}
+
+	@Override
+	public Users login(Users user) {
+
+		return null;
+	}
+
+	
 }

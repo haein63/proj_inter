@@ -1,6 +1,7 @@
 package com.homepage.dto;
 
-import java.sql.Timestamp;
+import java.sql.Date;
+
 
 public class Comments {
 	private int commentNo;
@@ -8,14 +9,14 @@ public class Comments {
 	private String userId;
 	private String commentContent;
 	private String musicalTitle;
-	private Timestamp regDate;
+	private Date regDate;
 	
 	public Comments() {
 		super();
 	}
 
 	public Comments(int commentNo, int commentRating, String userId, String commentContent, String musicalTitle,
-			Timestamp regDate) {
+			Date regDate) {
 		super();
 		this.commentNo = commentNo;
 		this.commentRating = commentRating;
@@ -55,10 +56,10 @@ public class Comments {
 	public void setMusicalTitle(String musicalTitle) {
 		this.musicalTitle = musicalTitle;
 	}
-	public Timestamp getRegDate() {
+	public Date getRegDate() {
 		return regDate;
 	}
-	public void setRegDate(Timestamp regDate) {
+	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
 	}
 

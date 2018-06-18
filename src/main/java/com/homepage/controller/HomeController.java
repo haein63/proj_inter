@@ -18,7 +18,7 @@ public class HomeController {
 		return "/include/footer";
 	}
 	
-	@RequestMapping(value="main")
+	@RequestMapping(value="/main")
 	public String main() {
 		return "main";
 	}

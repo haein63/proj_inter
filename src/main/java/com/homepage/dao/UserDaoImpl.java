@@ -26,6 +26,12 @@ public class UserDaoImpl implements UserDao{
 			return null;
 		}
 	}
+
+	@Override
+	public Users login(Users user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 
 }

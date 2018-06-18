@@ -11,7 +11,7 @@
 </insert> 
 <update id = "updateCmt">
 	update comments set comment_content=#{commentContent}
-	where user_id=#{userId}
+	where comment_no=#{commentNo}
 </update>
 </mapper>
 
