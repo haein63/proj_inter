@@ -26,8 +26,9 @@ public class UserDaoImpl implements UserDao{
 
 	@Override
 	public Users login(Users user) {
-		// TODO Auto-generated method stub
-		return null;
+		Users user1 = session.selectOne("login",user);
+		System.out.println("확인 dao"+user1.getId());
+		return user1;
 	}
 	
 

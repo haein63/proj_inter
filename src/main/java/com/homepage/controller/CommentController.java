@@ -25,7 +25,7 @@ public class CommentController {
 	
 	@PostMapping(value="/insertkey")
 	public String insert(Comments com) {
-		System.out.println(com.getMusicalTitle());
+		System.out.println(com.getMusicalTitle()+com.getCommentContent());
 		coms.insertCmt(com);
 		return "comment";
 	}

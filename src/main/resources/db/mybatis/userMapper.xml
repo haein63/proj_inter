@@ -9,8 +9,8 @@
 		values(#{id}, #{pass}, #{email}, #{pic,jdbcType=VARCHAR}, 'false')
 	</insert>
 	
-	<select id="login" parameterType="Users">
-		select 
+	<select id="login" parameterType="Users" resultType="Users">
+		select * from users where user_id=#{id} and user_password=#{password}
 	</select>
 
 </mapper>

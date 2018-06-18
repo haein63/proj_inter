@@ -6,7 +6,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action ="login" method="post">
+<form action ="loginkey" method="post">
 <input type="text" name="id" placeholder="id">
 <input type="password" name="password" placeholder="password">
 <input type="submit" value="로그인">

@@ -30,8 +30,9 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public Users login(Users user) {
-
-		return null;
+		Users user1 = mDao.login(user);
+System.out.println("확인 서비스"+user.getId());
+		return user1;
 	}
 
 	
