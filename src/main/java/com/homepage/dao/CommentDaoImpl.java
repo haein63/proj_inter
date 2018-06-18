@@ -13,14 +13,9 @@ public class CommentDaoImpl implements CommentDao {
 	SqlSessionTemplate session;
 
 	@Override
-	public int insertCmt(Comments comments) {
-		String statement = ns + "insert";
-		int result = session.insert(statement, comments);
-		if (result == 1) {
-			return 1;
-		} else {
-			return 0;
-		}
+	public void insertCmt(Comments comments) {
+		System.out.println("dao>>>>>>"+comments.toString());
+		session.insert("insertCmt",comments);
 	}
 
 	@Override
@@ -34,5 +29,7 @@ public class CommentDaoImpl implements CommentDao {
 			return 0;
 		}
 	}
+
+	
 
 }

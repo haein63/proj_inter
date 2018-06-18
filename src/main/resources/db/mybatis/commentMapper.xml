@@ -2,24 +2,16 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace = "com.homepage.dto.Comments">
-	<resultMap type="Comments" id="comments">
-	<id column="commentNo" property="commentNo"/>
-	<result column="userId" property="userId"/>
-	<result column="commentContent" property="commentContent"/>
-	<result column="musicalTitle" property="musicalTitle"/>
-	<result column="regDate" property="regDate"/>
-	</resultMap>
-	
-	<insert id = "insertCmt" parameterMap="Comments">
-		insert into comments 
-		values(#{commentContent},sysdate, #{userId},#{musicalTitle},
-        #{commentNo}, #{commentRating})
-	</insert>
-	
-	<delete id = "deleteCmt" parameterType="int">
-		delete from comments where comment_No=#{commentNo}
-	</delete>
-
+<mapper namespace="com.homepage.dto.Comments">
+<insert id="insertCmt">
+	insert into comments
+	(comment_content,user_id,musical_title,comment_no,comment_rating)
+	values(#{commentContent},#{userId},#{musicalTitle},
+	comment_no_seq.nextval, #{commentRating})
+</insert> 
+<update id = "updateCmt">
+	update comments set comment_content=#{commentContent}
+	where user_id=#{userId}
+</update>
 </mapper>
 
