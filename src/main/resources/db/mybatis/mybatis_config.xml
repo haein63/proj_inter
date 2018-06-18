@@ -10,10 +10,12 @@
 	<typeAliases>
 		<typeAlias type="com.homepage.dto.Members" alias="Members"/>
 		<typeAlias type="com.homepage.dto.Comments" alias="Comments"/>
+		<typeAlias type="com.homepage.dto.Musical" alias="Musical"/>
 	</typeAliases>
 	
 	<mappers>
 		<mapper resource="db/mybatis/memberMapper.xml"/>
 		 <mapper resource="db/mybatis/commentMapper.xml"/>
+		 <mapper resource="db/mybatis/musicalMapper.xml"/>
 	</mappers>
 </configuration>

@@ -33,8 +33,8 @@ public class MusicalServiceImpl implements MusicalService {
 	}
 
 	@Override
-	public List<Musical> getMusicals() {
-		List<Musical> result = mDao.getMusicals();
+	public List<Musical> getMusicals(String title) {
+		List<Musical> result = mDao.getMusicals(title);
 		return result;
 	}
 

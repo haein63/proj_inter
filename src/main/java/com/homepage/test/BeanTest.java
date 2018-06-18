@@ -13,7 +13,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.homepage.config.BusinessLogicConfig;
 import com.homepage.config.MVCConfig;
+import com.homepage.dao.MusicalDao;
 import com.homepage.service.CommentService;
+import com.homepage.service.MusicalService;
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes= {BusinessLogicConfig.class})
 public class BeanTest {
@@ -27,6 +29,15 @@ public class BeanTest {
 	@Test
 	public void test() {
 		assertThat(service, is(notNullValue()));
+	}
+	
+	@Autowired
+	MusicalService mService;
+	
+	@Test
+	public void mServiceTest() {
+		assertThat(mService, is(notNullValue()));
+		
 	}
 
 }

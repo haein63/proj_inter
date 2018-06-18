@@ -11,6 +11,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -23,18 +25,15 @@ public class MybatisTest {
 
 	@Autowired
 	DataSource ds;
+	@Value("${db.username}")
+	String username;
 	@Test
 	public void test() {
 		assertThat(ds, is(notNullValue()));
 		assertThat(ds instanceof BasicDataSource, is(true));
-	}
-	@Autowired
-	MusicalDao mRepo;
-	
-	@Test
-	public void mRepoTest() {
-		assertThat(mRepo.getMusicals(), is(notNullValue()));
+		assertThat(username, is("interMission"));
 	}
 	
-
+	
+	
 }

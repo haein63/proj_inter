@@ -38,7 +38,7 @@ public class CommentController {
 		comments.setUserId(userId);
 		comments.setCommentRating(rating);
 		System.out.println("확인1");
-		int result = coms.insertCmt(comments);
+		int result = com.insertCmt(comments);
 		System.out.println("확인2");
 		System.out.println(result);
 		model.addAttribute("result", result);

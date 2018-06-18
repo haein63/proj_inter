@@ -11,5 +11,5 @@ public interface MusicalService {
 	
 	List<Musical> getFutureMusicals();
 	
-	List<Musical> getMusicals();
+	List<Musical> getMusicals(String title);
 }
