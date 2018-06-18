@@ -6,7 +6,7 @@ import java.util.Date;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
 
-public class Members {
+public class Users {
 	private String id;
 	private String password;
 	private String email;
@@ -16,14 +16,11 @@ public class Members {
 	private String confirmKey;
 	private String confirmStatus;
 
-	public Members() {
-		super();
-		// TODO Auto-generated constructor stub
+	public Users() {
 	}
 
-	public Members(String id, String password, String email, String pic, Date regDate, String confirmKey,
+	public Users(String id, String password, String email, String pic, Date regDate, String confirmKey,
 			String confirmStatus) {
-		super();
 		this.id = id;
 		this.password = password;
 		this.email = email;
@@ -111,7 +108,7 @@ public class Members {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Members other = (Members) obj;
+		Users other = (Users) obj;
 		if (confirmKey == null) {
 			if (other.confirmKey != null)
 				return false;

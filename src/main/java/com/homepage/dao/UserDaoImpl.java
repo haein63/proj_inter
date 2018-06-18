@@ -7,21 +7,21 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.homepage.dto.Members;
+import com.homepage.dto.Users;
 
 @Repository
-public class MemberDaoImpl implements MemberDao{
-	private final String ns = "com.homepage.dto.Members.";
+public class UserDaoImpl implements UserDao{
+	private final String ns = "com.homepage.dto.Users.";
 	
 	@Autowired
 	SqlSessionTemplate session;
 
 	@Override
-	public Members join(Members members) {
+	public Users join(Users user) {
 		String statement = ns+"join";
-		int result = session.insert(statement, members);
+		int result = session.insert(statement, user);
 		if(result==1) {
-			return members;
+			return user;
 		}else {
 			return null;
 		}

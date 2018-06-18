@@ -6,25 +6,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.homepage.dao.MemberDao;
-import com.homepage.dto.Members;
+import com.homepage.dao.UserDao;
+import com.homepage.dto.Users;
 @Service
-public class MemberServiceImpl implements MemberService{
-	private static Logger mylog = LoggerFactory.getLogger(MemberServiceImpl.class);
+public class UserServiceImpl implements UserService{
+	private static Logger mylog = LoggerFactory.getLogger(UserServiceImpl.class);
 	
 	@Autowired
-	MemberDao mDao;
+	UserDao mDao;
 	
 	@Override
 	@Transactional
-	public Members join(Members member) {
-		Members members = null;
+	public Users join(Users member) {
+		Users user = null;
 		try {
-			members = mDao.join(member);
+			user = mDao.join(member);
 		}catch(Exception e) {
 			mylog.error("회원 가입 실패: ", e);
 		}
 		mylog.trace("축하합니다. 회원 가입 성공!");
-		return members;
+		return user;
 	}
 }

@@ -8,7 +8,7 @@
 	</settings>
 	
 	<typeAliases>
-		<typeAlias type="com.homepage.dto.Members" alias="Members"/>
+		<typeAlias type="com.homepage.dto.Users" alias="Users"/>
 		<typeAlias type="com.homepage.dto.Comments" alias="Comments"/>
 	</typeAliases>
 	

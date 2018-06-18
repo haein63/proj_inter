@@ -37,6 +37,6 @@
 <div class="btn-group">
 	<button class="button" href="#">지난 공연</button>
 	<button class="button" href="#">현재 공연</button>
-	<button class="button" href="#">공연 예정작</button>
+	<button class="button" href="#">공연 예정</button>
 </div>
 </div>

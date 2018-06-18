@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
-import com.homepage.dto.Members;
+import com.homepage.dto.Users;
 
-public interface MemberDao {
-	Members join(Members members);
+public interface UserDao {
+	Users join(Users user);
 }

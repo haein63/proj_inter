@@ -8,19 +8,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HomeController {
 	
-	
-	@RequestMapping(value="/join")
-	public String join(Model model) {
-		
-		return "JoinForm";
-	}
-	
-	@RequestMapping(value="/join1")
-	public String join1(@RequestParam String name, Model model) {
-		model.addAttribute("name",name);
-		return "joinresult";
-	}
-
 	@RequestMapping(value="/include/header")
 	public String header() {
 		return "/include/header";
