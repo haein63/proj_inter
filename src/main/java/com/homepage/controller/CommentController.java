@@ -15,7 +15,7 @@ import com.homepage.service.CommentService;
 public class CommentController {
 
 	@Autowired
-	CommentService com;
+	CommentService coms;
 	
 	
 	@GetMapping(value="/comment")
@@ -24,24 +24,20 @@ public class CommentController {
 	}
 	
 	@PostMapping(value="/insertkey")
-	public String insert(@RequestParam(value="userId") String userId,
-			@RequestParam(value="comment") String comment,
-			@RequestParam(value="title") String title,
-			@RequestParam(value="no") int no,
-			@RequestParam(value="rating") int rating,
-			Model model
-			) {
-		Comments comments = null;
-		comments.setCommentContent(comment);
-		comments.setMusicalTitle(title);
-		comments.setCommentNo(no);
-		comments.setUserId(userId);
-		comments.setCommentRating(rating);
-		System.out.println("확인1");
-		int result = com.insertCmt(comments);
-		System.out.println("확인2");
-		System.out.println(result);
-		model.addAttribute("result", result);
+	public String insert(Comments com) {
+		System.out.println(com.getMusicalTitle()+com.getCommentContent());
+		coms.insertCmt(com);
 		return "comment";
+	}
+	
+	@GetMapping(value="/updateCmt")
+	public String updateCmt(Model model) {
+		return "updateCmt";
+	}
+	
+	@PostMapping(value="/updatekey")
+	public String update(Comments com) {
+		coms.updateCmt(com);
+		return "updateCmt";
 	}
 }

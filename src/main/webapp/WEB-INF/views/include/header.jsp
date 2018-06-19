@@ -59,9 +59,9 @@ text-align: center;
 
 	<div class="empty_box"></div>
 	<div class="sign_box">
-		<a href="#" class="login" style="text-decoration: none;">LOGIN</a>
+		<input class="login" type="button" value="로그인" onclick="location.href='login'">
 		<div class="separation">/</div>
-		<a href="#" class="join" style="text-decoration: none;">JOIN</a>
+		<input class="join" type="button" value="회원가입" onclick="location.href='join'">
 	</div>
 
 </div>`

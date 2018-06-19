@@ -6,15 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
-
 <body>
-
-<form action="join1">
-<input type="text" id="name" name="name">
-
-
-
-<input type="submit">
-</form>
+환영합니다.${member.id}로 가입되셨습니다.
 </body>
 </html>

@@ -13,15 +13,22 @@ public class CommentServiceImpl implements CommentService {
 	CommentDao cdao;
 	
 	@Override
-	public int insertCmt(Comments comments) {
-		int result = cdao.insertCmt(comments);
-		return result;
+	public void insertCmt(Comments comments) {
+		System.out.println("ser>>>>>>"+comments.toString());
+		cdao.insertCmt(comments);
 	}
-
+	
+	@Override
+	public void updateCmt(Comments comments) {
+		
+	}
+	
 	@Override
 	public int deleteCmt(int commentNo) {
 		int result = cdao.deleteCmt(commentNo);
 		return result;
 	}
+
+	
 
 }

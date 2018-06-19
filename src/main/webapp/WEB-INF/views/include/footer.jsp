@@ -31,20 +31,25 @@
 }
 
 .logo {
+	width: 15%;
 	font-family: Anton;
 	font-size: 20px;
 	align-items: right;
+	text-align: right;
+	
 }
 
 .info {
+	width: 90%;
 	background-color: #9b886f;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
 	justify-content: space-around;
-	font-family: Nanum+Gothic;
+	font-family: Nanum + Gothic;
 	font-size: 14px;
+	text-align: left;
 }
 
 .copyright {
