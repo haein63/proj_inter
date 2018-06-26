@@ -11,7 +11,7 @@ public interface MusicalDao {
 	
 	List<Musical> getFutureMusicals();
 	
-	List<Musical> getMusicals(String title);
+	Musical getMusicals(String title);
 	
 	int currentMusicalCnt();
 }

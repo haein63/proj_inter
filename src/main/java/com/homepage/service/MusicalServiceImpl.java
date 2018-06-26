@@ -17,6 +17,7 @@ public class MusicalServiceImpl implements MusicalService {
 	@Override
 	public List<Musical> getCurrentMusicals() {
 		List<Musical> result = mDao.getCurrentMusicals();
+		System.out.println(result.toString());
 		return result;
 	}
 
@@ -33,8 +34,8 @@ public class MusicalServiceImpl implements MusicalService {
 	}
 
 	@Override
-	public List<Musical> getMusicals(String title) {
-		List<Musical> result = mDao.getMusicals(title);
+	public Musical getMusicals(String title) {
+		Musical result = mDao.getMusicals(title);
 		return result;
 	}
 
